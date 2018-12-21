@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<title>Form</title>
+
+
+  	<style type="text/css">
+		html,body
+        {
+            margin: 0;
+            padding: 0; 
+        }
+        .back2
+        {
+        	background-color: white;
+        	position: fixed;
+        	border-style: none;
+        	/*opacity: 0.5;*/
+        	height: 70px;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+            left: 0;
+        }
+        .nav
+             {
+             	position: absolute;
+                 background-color: transparent;
+                 display: inline;
+                 margin: 0;
+                 list-style-type: none;
+                 padding: 0;
+                 display: table-header-group;
+                 position: fixed;
+                box-sizing: content-box;
+                /* height: 70px;
+                 width: 100%;*/
+                 top: 0;
+                 left: 0;
+                 z-index: 1;
+                 border-style: none;
+             }
+          
+             ul
+             {
+                 list-style-type: none;
+                 padding: 0;
+                 margin: 0;
+             }
+             .bar
+             {
+                 float: left 50px;
+                 margin: 20px;
+             }
+             li
+             {
+                 display: inline;
+                 color: #8f2950;
+                 float: left;
+                 margin-right: 0;
+             }
+            li a
+             {
+                display:inline;
+                color:#8f2950; 
+                 text-align: center;
+                 padding: 14px 16px;
+                 text-decoration: none;
+                 font-size: 16px;
+                 font-style:normal;
+                 font-family:fantasy;
+
+             }
+            a:hover
+             {
+                color: black;
+             }
+        .container
+        {
+   	    	position: relative;
+            height: 100%;
+            width: 100%;
+            /*background-color:#8f2950;*/
+            background-image: url(leaf-1571833_1920.jpg);
+            background-repeat: no-repeat;
+            background-size: auto; 
+            text-align: center;
+        }
+      	.back
+      	{
+      		background-color: black;
+      		opacity: 0.5;
+      		width: 550px;
+      		height: 420px;
+      		margin-right: 390px;
+            margin-left: 390px;
+            margin-top: 110px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+      	}
+      	.overlap
+      	{
+      		position: absolute;
+      		width: 550px;
+      		height: 550px;
+      		top: 40px;
+      	}
+        .form
+        {
+          
+            width: 550px;
+            z-index: 1;
+            opacity: 1;
+            text-align: center;
+            position: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 390px;
+            margin-left: 390px;
+            font-size: 20px;
+            border-color: #DCDCDC;
+     		border-radius: 5px;
+        }
+        form
+        {
+        	align-self :"center";
+        	border-color: #DCDCDC;
+        	border-radius: 5px;
+
+        }
+        i
+        {
+        	width: 30px;
+        }
+        input
+        {
+        border: 0;
+        outline: 0;
+       	background: #FDEEF4;
+        /*border-bottom: 1px solid black;*/
+        border-radius: 7px;
+        width: 450px;
+        margin: 10px;
+        color: black; 
+        }
+        #mobile
+        {
+            font-size: 28px;
+        }
+        i
+        {
+        	color: white;
+        	margin: 5px;
+        }
+        .btn
+        {
+        	text-transform: uppercase;
+        	font-size: 17px;
+
+        }
+        .btn-danger {
+   		 	background: transparent;
+    		color: #ffffff;
+    		border-color: #ffffff;
+		}
+		.btn-danger:hover
+		{
+			background: #ffffff;
+    		color: #8f2950;
+    		border-color: #ffffff;
+		}
+		#icons{
+            width: 100%;
+            height: 45px;
+            display: inline-block;
+            font-size: 25px;
+            text-align: center;
+            background-color:white;
+            margin-top: 30px;
+            color: #f1f1f1;
+        }
+        #footer-icons{
+            cursor: pointer;
+            color:black;
+            border-radius: 50%;
+            }
+        
+        #footer-icons:hover{
+            cursor: pointer;
+            color:#8f2950;
+            border-radius: 50%;
+            }
+         #space{
+            width: 100%;
+            height: 30px;
+        }
+         #back{
+            width: 25px;
+            height: 25px;
+            background-color:none;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            position: center;
+            padding-right: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .option{
+            border-radius: 7px;
+            background-color: #FDEEF4;
+        }
+        .container-browse
+        {
+            box-sizing: content-box;
+            width: 550px;
+        }
+        .image-preview-input 
+        {
+            position: relative;
+            overflow: hidden;
+            margin: 10px;    
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;    
+        }
+        .image-preview-input input[type=file]
+        {
+	        position: absolute;
+	        /*top: 0;
+	        right: 0;
+	        margin: 0;
+	        padding: 0;*/
+	        font-size: 20px;
+	        cursor: pointer;
+	        opacity: 0;
+	        filter: alpha(opacity=0);
+        }
+        .image-preview-input-title 
+        {
+            margin-left:10px;
+            height: 50px;
+        }
+        .birth-h:hover
+        {
+            border-color: none;
+            box-decoration-break: none;
+            outline: 0;
+            border: 0;
+        }
+        .birth-h:active
+        {
+            outline: none;
+            border: none;
+            outline-color: transparent;
+        }
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+			
+      	<div class="back2"></div>
+      	<div class="nav" style="color: #8f2950">
+             <ul>
+             
+              <li>         
+                <ul>     
+                    <div class="bar">
+                        <li><span><a href="#">HOME   </a></span></li>
+                        <li><a href="#">SIGN UP</a></li>
+                        <li><a href="#">SIGN IN</a></li> 
+                    </div>
+                </ul>
+             </li>
+                </ul>    
+            </div> 
+
+			
+			<div class="back"></div>
+			<div class="overlap">
+				
+			<form class="form" id="form">
+				<p style="font-size: 28px; text-align: center; color: white; font-weight: bold;">Registration Form</p>
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i><input class="name" type="text" placeholder="Name" onclick="name();"><br>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i><input class="email" type="email" placeholder="Email"><br>
+                            <i class="fa fa-mobile" aria-hidden="true" id="mobile""></i>
+                            	<!--<div class="code" style="background-color : #FDEEF4 ; border-radius: 7px; width: 40px;">+02</div> -->
+                                <input class="mobile" type="text" placeholder="Mobile"><br>
+                            <i class="fa fa-birthday-cake"></i>
+                                <select name="month" class="birth-h" style="border-radius:7px;">
+                                    <option value="month" class="option">Month</option>
+                                    <option value="jan" class="option">January</option>
+                                    <option value="feb" class="option">February</option>
+                                    <option value="mar" class="option">March</option>
+                                    <option value="apr" class="option">April</option>
+                                    <option value="may" class="option">May</option>
+                                    <option value="june" class="option">June</option>
+                                    <option value="july" class="option">July</option>
+                                    <option value="aug" class="option">August</option>
+                                    <option value="sep" class="option">September</option>
+                                    <option value="oct" class="option">October</option>
+                                    <option value="nov" class="option">November</option>
+                                    <option value="dec" class="option">December</option>
+                                </select>
+                                <select name="day" class="birth-h" style="border-radius:7px;">
+                                    <option value="day" class="option">Day</option>
+                                    <option value="1" class="option">1</option>
+                                    <option value="2" class="option">2</option>
+                                    <option value="3" class="option">3</option>
+                                    <option value="4" class="option">4</option>
+                                    <option value="5" class="option">5</option>
+                                    <option value="6" class="option">6</option>
+                                    <option value="7" class="option">7</option>
+                                    <option value="8" class="option">8</option>
+                                    <option value="9" class="option">9</option>
+                                    <option value="10" class="option">10</option>
+                                    <option value="11" class="option">11</option>
+                                    <option value="12" class="option">12</option>
+                                    <option value="13" class="option">13</option>
+                                    <option value="14" class="option">14</option>
+                                    <option value="15" class="option">15</option>
+                                    <option value="16" class="option">16</option>
+                                    <option value="17" class="option">17</option>
+                                    <option value="18" class="option">18</option>
+                                    <option value="19" class="option">19</option>
+                                    <option value="20" class="option">20</option>
+                                    <option value="21" class="option">21</option>
+                                    <option value="22" class="option">22</option>
+                                    <option value="23" class="option">23</option>
+                                    <option value="24" class="option">24</option>
+                                    <option value="25" class="option">25</option>
+                                    <option value="26" class="option">26</option>
+                                    <option value="27" class="option">27</option>
+                                    <option value="28" class="option">28</option>
+                                    <option value="29" class="option">29</option>
+                                    <option value="30" class="option">30</option>
+                                    <option value="31" class="option">31</option>
+                                </select>
+                                <select name="year" class="birth-h" style="border-radius:7px; border-block-end-color: none; border-block-end-style: none; border-style: none; border-color: none;">
+                                    <option value="year" class="option">Year</option>
+                                   <!-- <option value="2002" class="option">2002</option>
+                                    <option value="2001" class="option">2001</option>
+                                    <option value="2000" class="option">2000</option>
+                                    <option value="1999" class="option">1999</option> -->
+                                    <option value="1998" class="option">1998</option>
+                                    <option value="1997" class="option">1997</option>
+                                    <option value="1996" class="option">1996</option>
+                                    <option value="1995" class="option">1995</option>
+                                    <option value="1994" class="option">1994</option>
+                                    <option value="1993" class="option">1993</option>
+                                    <option value="1992" class="option">1992</option>
+                                    <option value="1991" class="option">1991</option>
+                                    <option value="1990" class="option">1990</option>
+                                </select>
+                                <div class="container-browse" style="position:inline">
+                                <div class="row" style="margin-top:20px">    
+                                    <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  
+                                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                                        <div class="input-group image-preview">
+                                            <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                            <span class="input-group-btn">
+                                                <!-- image-preview-clear button -->
+                                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                                    <span class="glyphicon glyphicon-remove"></span> Clear
+                                                </button>
+                                                <!-- image-preview-input -->
+                                                <div class="btn btn-default image-preview-input">
+                                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                                    <span class="image-preview-input-title">Browse</span>
+                                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                                                </div>
+                                            </span>
+                                        </div><!-- /input-group image-preview [TO HERE]--> 
+                                    </div>
+                                </div>
+                            </div>
+            </form>
+        	</div>
+             <button type="button" class="btn btn-danger" >Sign up</button>
+            <div id="space"></div>
+
+            <div id="icons" style="margin: 0 auto">
+            	
+            <div id="back" style="margin: 0 auto"> <a href="#" class="link"><i class="fa fa-twitter" id="footer-icons"></i></a></div>
+            <div id="back" style="margin: 0 auto"> <a href="#" class="link"><i class="fa fa-facebook" id="footer-icons"></i></a></div>
+            <div id="back" style="margin: 0 auto"><a href="#" class="link"><i class="fa fa-github" id="footer-icons"></i></a></div>
+        
+
+	</div>
+
+
+			  
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+$(document).on('click', '#close-preview', function(){ 
+    $('.image-preview').popover('hide');
+    // Hover befor close the preview
+    $('.image-preview').hover(
+        function () {
+           $('.image-preview').popover('show');
+        }, 
+         function () {
+           $('.image-preview').popover('hide');
+        }
+    );    
+});
+
+$(function() {
+    // Create the close button
+    var closebtn = $('<button/>', {
+        type:"button",
+        text: 'x',
+        id: 'close-preview',
+        style: 'font-size: initial;',
+    });
+    closebtn.attr("class","close pull-right");
+    // Set the popover default content
+    $('.image-preview').popover({
+        trigger:'manual',
+        html:true,
+        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+        content: "There's no image",
+        placement:'bottom'
+    });
+    // Clear event
+    $('.image-preview-clear').click(function(){
+        $('.image-preview').attr("data-content","").popover('hide');
+        $('.image-preview-filename').val("");
+        $('.image-preview-clear').hide();
+        $('.image-preview-input input:file').val("");
+        $(".image-preview-input-title").text("Browse"); 
+    }); 
+    // Create the preview image
+    $(".image-preview-input input:file").change(function (){     
+        var img = $('<img/>', {
+            id: 'dynamic',
+            width:250,
+            height:200
+        });      
+        var file = this.files[0];
+        var reader = new FileReader();
+        // Set preview image into the popover data-content
+        reader.onload = function (e) {
+            $(".image-preview-input-title").text("Change");
+            $(".image-preview-clear").show();
+            $(".image-preview-filename").val(file.name);            
+            img.attr('src', e.target.result);
+            $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+        }        
+        reader.readAsDataURL(file);
+    });  
+});
+
+</script>
